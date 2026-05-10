@@ -99,14 +99,14 @@ channel.start_consuming()
 ```
 
 *Зайдите в веб-интерфейс, найдите очередь под названием hello и сделайте скриншот.*
-
+`Сообщение из очереди hello`
+![publisher-py.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/e4c7df8cd1119a888b16f7cbf76537c675ba5e4b/publisher-py.jpg)
 
 
 *После чего запустите второй скрипт consumer.py и сделайте скриншот результата выполнения скрипта*
-
-*В качестве решения домашнего задания приложите оба скриншота, сделанных на этапе выполнения.*
-
-
+`Запуск consumer.py и результат`
+![consumer-py.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/e4c7df8cd1119a888b16f7cbf76537c675ba5e4b/consumer-py.jpg)
+*В качестве решения домашнего задания приложите оба скриншота, сделанных на этапе выполнения.* - см выше
 
 ---
 
