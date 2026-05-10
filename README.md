@@ -132,30 +132,27 @@ channel.start_consuming()
 
 *Также приложите вывод команды `rabbitmqctl cluster_status` с двух нод:*
 
+`Статус ноды 1`
+![status-node1.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/8067ab1ee7e123665462f064fc07381cd0f6101e/status-node1.jpg)
 
-
+`Статус ноды 2`
+![status-node1.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/8067ab1ee7e123665462f064fc07381cd0f6101e/status-node2.jpg)
 
 *Для закрепления материала снова запустите скрипт producer.py и приложите скриншот выполнения команды `rabbitmqadmin get queue` на каждой из нод*
 
-```shell script
-$ ='hello'
-```
 `Вывод команды get queue на ноде 1`
 ![getqueue-node1.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/f2e6b6a45c95b8697cf3af30fe6b0018c1d19f76/getqueue-node1.jpg)
 
 `Вывод команды get queue на ноде 2`
 ![getqueue-node1.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/f2e6b6a45c95b8697cf3af30fe6b0018c1d19f76/getqueue-node2.jpg)
-После чего попробуйте отключить одну из нод, желательно ту, к которой подключались из скрипта, затем поправьте параметры подключения в скрипте consumer.py на вторую ноду и запустите его.
 
+*После чего попробуйте отключить одну из нод, желательно ту, к которой подключались из скрипта, затем поправьте параметры подключения в скрипте consumer.py на вторую ноду и запустите его.*
 *Приложите скриншот результата работы второго скрипта.*
 
+`Отключена первая нода`
+![node1-stop.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/8067ab1ee7e123665462f064fc07381cd0f6101e/node1-stop.jpg)
 
-## Дополнительные задания (со звёздочкой*)
-Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
+`Работа скрипта приема сообщений с подключением ко второй ноде`
+![consumer-node1stopped.jpg](https://github.com/turboturtle-90/KrolikMQ/blob/8067ab1ee7e123665462f064fc07381cd0f6101e/consumer-node1stopped.jpg)
 
-### * Задание 4. Ansible playbook
 
-Напишите плейбук, который будет производить установку RabbitMQ на любое количество нод и объединять их в кластер.
-При этом будет автоматически создавать политику ha-all.
-
-*Готовый плейбук разместите в своём репозитории.*
